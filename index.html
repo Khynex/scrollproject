@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles.css">
     <title>Scroll Project</title>
 
+
 </head>
 
 <body class="bg-gray-100">
@@ -17,11 +18,11 @@
     <div id="backToTop"></div>
 
     <!-- header -->
-    <header id="home" class="header transition-effect">
+    <header id="home" class="header z-50  transform transition-all duration-1000">
 
         <!-- navbar -->
-        <nav id="nav">
-            <div class="nav-center md:flex justify-between items-center shadow-md md:px-12 lg:px-32 bg-gradient-to-t from-green-900 to-green-900 text-white">
+        <nav id="nav" class="transform transition-all duration-1000">
+            <div class="nav-center md:flex justify-between items-center shadow-md md:px-12 lg:px-32 bg-gradient-to-t from-green-900 to-green-900 text-white ">
 
                 <!-- nav-header -->
                 <div class="flex justify-between items-center px-6">
@@ -36,9 +37,9 @@
                 </div>
 
                 <!-- links -->
-                <div class="links-container hidden md:flex transform transition-all duration-300 px-2 pb-2 md:pb-0">
+                <div class="links-container hidden md:flex px-2 pb-2 md:pb-0">
 
-                    <ul class="links md:flex justify-center items-center md:space-x-6 lg:space-x-12  mb-2 md:mb-0 md:mt-0 space-y-2 md:space-y-0 md:px-12 overflow-hidden" 12>
+                    <ul class="links md:flex justify-center items-center md:space-x-6 lg:space-x-12  mb-2 md:mb-0 md:mt-0 space-y-2 md:space-y-0 md:px-12 overflow-hidden">
                         <li class="hover-effect">
                             <a href="#home" class="scroll-link active-tab" data-li="home">home</a>
                         </li>
@@ -154,7 +155,7 @@
     </section>
 
     <!-- tours -->
-    <section id="tours" class="mt-2 md:my-12 mx-auto px-12 lg:px-24 shadow-md ">
+    <section id="tours" class="mt-2 mx-auto px-12 lg:px-24">
 
         <div class="py-6 h-full w-full text-black ">
             <h1 class="text-2xl md:text-3xl mb-4 border-b-2 pb-3 uppercase font-bold ">featured <span class="text-green-500 ">tours</span></h1>
@@ -162,7 +163,92 @@
 
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, itaque temporibus corporis eligendi sit aliquam voluptates soluta pariatur minima beatae quisquam id laborum eum labore ipsam libero dolorem, nisi sint.</p>
         </div>
+
     </section>
+
+    <!-- locations -->
+    <div id="tours" class="mt-2 md:my-2 pb-12 mx-auto md:px-12 lg:px-24 flex flex-col">
+
+        <div class="py-6 h-full w-full text-black px-12 md:px-0">
+            <h1 class="text-xl md:text-2xl mb-4 pb-0.5 capitalize font-bold text-yellow-600">holiday <span class="text-green-600 ">locations</span></h1>
+            <p>Swipe through our collection of some of the best holiday locations available.</p>
+            </p>
+        </div>
+
+        <article class="relative slider-container overflow-hidden mt-2 lg:mt-10 w-full h-full">
+            <!-- img 1 -->
+            <div class="slide top-0 left-0 text-center w-full h-full">
+                <div class="mx-auto flex flex-col justify-end items-center text-center relative">
+                    <img src="./img/bhutan.jpg" alt="" class="w-screen h-96 md:h-97 lg:h-98 slide-img block">
+                    <h1 class="label">Bhutan</h1>
+
+                </div>
+            </div>
+            <!-- 2 -->
+
+            <div class="absolute slide top-0 left-0 text-center w-full h-full">
+                <div class="mx-auto flex flex-col justify-end items-center text-center relative">
+                    <img src="./img/edinburgh-city.jpg" alt="" class="w-screen h-96 md:h-97 lg:h-98 slide-img block">
+                    <h1 class="label">Edinburgh City, Scotland</h1>
+
+                </div>
+            </div>
+            <!-- 3 -->
+
+            <div class="absolute slide top-0 left-0 text-center w-full h-full">
+                <div class="mx-auto flex flex-col justify-end items-center text-center relative">
+                    <img src="./img/salzburg.jpg" alt="" class="w-screen h-96 md:h-97 lg:h-98 slide-img block">
+                    <h1 class="label">Salzburg, Austria</h1>
+
+                </div>
+            </div>
+            <!-- 4 -->
+
+            <div class="absolute slide top-0 left-0 text-center w-full h-full">
+                <div class="mx-auto flex flex-col justify-end items-center text-center relative">
+                    <img src="./img/southkorea.jpg" alt="" class="w-screen h-96 md:h-97 lg:h-98 slide-img block">
+                    <h1 class="label">South Korea</h1>
+
+                </div>
+            </div>
+            <!-- 5 -->
+
+            <div class="absolute slide top-0 left-0 text-center w-full h-full">
+                <div class="mx-auto flex flex-col justify-end items-center text-center relative">
+                    <img src="./img/funchal-madeira.jpg" alt="" class="w-screen h-96 md:h-97 lg:h-98 slide-img block">
+                    <h1 class="label">Funchal Madeira</h1>
+
+                </div>
+            </div>
+            <!-- 6 -->
+
+            <div class="absolute slide top-0 left-0 text-center w-full h-full">
+                <div class="mx-auto flex flex-col justify-end items-center text-center relative">
+                    <img src="./img/bulgaria.jpg" alt="" class="w-screen h-96 md:h-97 lg:h-98 slide-img block">
+                    <h1 class="label">Bulgaria</h1>
+
+                </div>
+            </div>
+
+        </article>
+
+        <!-- Buttons -->
+        <div class="btn-container text-2xl mt-2 space-x-3 flex justify-end px-6">
+            <!-- previous button -->
+            <button type="button" class="prev-btn capitalize text-yellow-800 hover:text-yellow-600 text-xl">
+                <span class="text-sm md:text-lg">
+                    <i class="fas fa-chevron-left"></i>
+                </span>prev
+            </button>
+            <!-- next button -->
+            <button type="button" class="next-btn capitalize hover:text-green-600 text-green-800 text-xl">next
+                <span class="text-sm md:text-lg text-green-600">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+            </button>
+        </div>
+    </div>
+
 
     <!-- footer -->
     <footer class="relative">
@@ -175,7 +261,7 @@
         </div>
 
         <!-- back to top link-->
-        <div class="top-link bottom-4 right-2 text-white bg-green-400 px-1.5 animate-pulse fixed rounded transform transition-all ease delay-150 duration-300">
+        <div class="top-link bottom-4 right-2 text-white bg-green-400 px-1.5 animate-pulse fixed rounded transform transition-all ease duration-500 text-xl">
 
             <a href="#backToTop">
                 <i class="fa fa-arrow-up"></i>

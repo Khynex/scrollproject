@@ -14,6 +14,51 @@ const btns = document.querySelectorAll('.btn');
 const articles = document.querySelectorAll('.content');
 const date = document.getElementById('date');
 
+// slider
+const slides = document.querySelectorAll('.slide');
+const nextBtn = document.querySelector('.next-btn');
+const prevBtn = document.querySelector('.prev-btn');
+
+slides.forEach((slide, index) => {
+    slide.style.left = `${index * 100}%`
+});
+
+let counter = 0;
+nextBtn.addEventListener('click', () => {
+    counter++;
+    carousel();
+});
+prevBtn.addEventListener('click', () => {
+    counter--;
+    carousel();
+});
+
+function carousel() {
+
+    // if (counter === slides.length) {
+
+    //     counter = 0;
+    // }
+    // if (counter < 0) {
+    //     counter = slides.length - 1;
+    // }
+
+    if (counter < slides.length - 1) {
+        nextBtn.style.display = 'inline-block';
+    } else {
+        nextBtn.style.display = 'none';
+    }
+    if (counter > 0) {
+        prevBtn.style.display = 'inline-block';
+    } else {
+        prevBtn.style.display = 'none';
+    }
+
+    slides.forEach(slide => {
+        slide.style.transform = `translate(-${counter * 100}%)`;
+    })
+}
+
 
 // set date
 date.innerHTML = new Date().getFullYear();
